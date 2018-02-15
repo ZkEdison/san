@@ -218,6 +218,10 @@ function Component(options) { // eslint-disable-line
     // #[end]
 }
 
+Component.prototype.getComponentType = function (aNode) {
+    return this.components[aNode.tagName];
+};
+
 
 Component.prototype._createGivenSlots = function () {
     var me = this;
